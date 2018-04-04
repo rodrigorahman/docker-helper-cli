@@ -25,3 +25,31 @@ Para isso basta adicionar as apps dentro do atributo appsEnabled
 ```
 
 ## Criando seus proprios comandos 
+
+Para criar seus comandos você deve adicionar a tag customCommandExec.
+
+
+ex:
+```json
+{
+  "defaultWebProjectName" : "flightgroup-api",
+  "appsEnabled": [
+    {"name": "redis"},
+    {"name": "consul"}
+  ],
+  "customCommandExec": [
+    {
+      "name": "docker ps",
+      "description": "lista as dockers",
+      "alias": "ps",
+      "command":["docker ps", "docker ps -a"] 
+    },
+    {
+      "name": "docker ps -a",
+      "description": "lista as dockers",
+      "alias": "psa",
+      "command": ["docker ps -a"]
+    }
+  ]
+}
+```
