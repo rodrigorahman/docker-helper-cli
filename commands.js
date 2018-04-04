@@ -24,7 +24,7 @@ if(configExists){
 }
 
 appsEnableds.push({name: "Other"});
-console.log(appsEnableds)
+
 commander
   .version('0.0.1')
   .description('Utility to work with docker-compose at development time, many people use make to do this, but we can make it much better using nodejs');
