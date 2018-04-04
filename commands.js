@@ -27,19 +27,19 @@ appsEnableds.push({name: "Other"});
 console.log(appsEnableds)
 commander
   .version('0.0.1')
-  .description('Utilitario para trabalhar com docker-compose em tempo de desenvolvimento, muitas pessoas utilizam o make para fazer isso, porem podemos deixar isso muito melhor utilizando nodejs');
+  .description('Utility to work with docker-compose at development time, many people use make to do this, but we can make it much better using nodejs');
 
 commander
   .command('package')
   .alias('p')
-  .description('Run mvn package para compilar todos os projetos que estao no pom.xml')
+  .description('Run mvn package for compile all projects in pom.xml')
   .action(async() => package())
 
 commander
   .command('start')
   .alias('s')
   .option('-l, --log', 'tail in log after start')
-  .description('Run mvn package para compilar todos os projetos que estao no pom.xml e inicia o docker-compose')
+  .description('Run mvn package for a compile all projects in pom.xml')
   .action(async(cmd) => {
     await package();
     await startStack()
@@ -57,7 +57,7 @@ commander
 commander
   .command('rebuild-app [app]')
   .alias('r')
-  .description('Faz novamente o build do projeto especificado')
+  .description('Do again a build of specific project')
   .action(async(app) => rebuildApp(app))
 
 commander
@@ -74,7 +74,7 @@ commander
 commander
   .command('hot-deploy [app]')
   .alias('hd')
-  .description('hot deploy app')
+  .description('Hot Deploy app or defaultWebApp')
   .action(async(app) => {
     if(!app){
       app = defaultWebProjectName;

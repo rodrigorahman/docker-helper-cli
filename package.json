@@ -1,7 +1,7 @@
 {
   "name": "docker-helper-cli",
   "version": "1.0.1",
-  "description": "Utilitario para trabalhar com docker-compose em tempo de desenvolvimento, muitas pessoas utilizam o make para fazer isso, porem podemos deixar isso muito melhor utilizando nodejs",
+  "description": "Utility to work with docker-compose at development time, many people use make to do this, but we can make it much better using nodejs",
   "main": "index.js",
   "readmeFilename": "README.md",
   "keywords": [
