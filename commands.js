@@ -83,7 +83,7 @@ commander
     await rebuildApp(app);
     await logApp(app)
   })
-console.log(customCommandExec.lenght);
+
 if(customCommandExec.length > 0){
   customCommandExec.forEach(custom => {
     commander
