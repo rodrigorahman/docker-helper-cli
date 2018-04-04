@@ -1,3 +1,49 @@
+# Instalação 
+
+Instale sempre esse pacote como global pois só assim ele poderá se executado de qualquer pasta
+
+```
+npm i docker-helper-cli --global
+```
+
+# Visualizando lista de comandos
+
+```
+docker-helper-cli --help
+```
+
+**OU**
+
+```
+dhc --help
+```
+
+# Executando um start stack (docker-compose up)
+
+```
+docker-helper-cli s
+```
+
+**OU**
+
+```
+dhc s
+```
+
+## Para ao final ele mostrar o log da aplicação default utilize: 
+
+
+```
+docker-helper-cli s -l
+```
+
+**OU**
+
+```
+dhc s -l
+```
+
+
 # Configuracoes adicionais
 
 Para facilitar sua vida você pode utilizar algumas configurações extras para seu projeto, para isso basta criar o arquivo dhc-config.json

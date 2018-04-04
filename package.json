@@ -3,6 +3,17 @@
   "version": "1.0.0",
   "description": "Utilitario para trabalhar com docker-compose em tempo de desenvolvimento, muitas pessoas utilizam o make para fazer isso, porem podemos deixar isso muito melhor utilizando nodejs",
   "main": "index.js",
+  "readmeFilename": "README.md",
+  "keywords": [
+    "docker",
+    "cli",
+    "dockerCLI",
+    "dockerHelper"
+  ],
+  "tags": [
+    "docker",
+    "docker-cli"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +21,15 @@
     "type": "git",
     "url": "git+https://github.com/rodrigorahman/docker-helper-cli.git"
   },
-  "author": "Rodrigo Silva Rahman de Almeida",
-  "license": "ISC",
+  "author": {
+    "name": "Rodrigo Silva Rahman de Almeida",
+    "email": "rodrigorahman@gmail.com",
+    "homepage": "https://rodrigorahman.github.io/docker-helper-cli/"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8.0"
+  },
   "bugs": {
     "url": "https://github.com/rodrigorahman/docker-helper-cli/issues"
   },
