@@ -18,8 +18,11 @@ if(configExists){
   
   const config = JSON.parse(fs.readFileSync(configFileName, 'utf8'));
   defaultWebProjectName = config.defaultWebProjectName;
+  if(config.appsEnabled){
+    const apps = config.appsEnabled || []
+    appsEnableds.push(...apps)
+  }
   
-  appsEnableds.push(...config.appsEnabled)
   customCommandExec = config.customCommandExec || [];
 }
 
