@@ -20,7 +20,7 @@ if(configExists){
   defaultWebProjectName = config.defaultWebProjectName;
   
   appsEnableds.push(...config.appsEnabled)
-  customCommandExec = config.customCommandExec;
+  customCommandExec = config.customCommandExec || [];
 }
 
 appsEnableds.push({name: "Other"});
