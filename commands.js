@@ -14,6 +14,8 @@ let appsEnableds = [
 ];
 let customCommandExec = [];
 
+let javaProject = true;
+
 if(configExists){
   
   const config = JSON.parse(fs.readFileSync(configFileName, 'utf8'));
@@ -24,6 +26,7 @@ if(configExists){
   }
   
   customCommandExec = config.customCommandExec || [];
+  javaProject = config.javaProject || true
 }
 
 appsEnableds.push({name: "Other"});
@@ -101,11 +104,15 @@ if(customCommandExec.length > 0){
 commander.parse(process.argv);
 
 async function package() {
-  await commandExec('mvn package') 
+  if(javaProject){
+    await commandExec('mvn package') 
+  }
 }
 
 async function clean() {
-  await commandExec('mvn clean') 
+  if(javaProject){
+    await commandExec('mvn clean') 
+  }
 }
 
 async function startStack() {
