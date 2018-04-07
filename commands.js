@@ -26,7 +26,11 @@ if(configExists){
   }
   
   customCommandExec = config.customCommandExec || [];
-  javaProject = config.javaProject || true
+  if(config.javaProject !== undefined){
+    javaProject = config.javaProject
+  }
+  
+  
 }
 
 appsEnableds.push({name: "Other"});
