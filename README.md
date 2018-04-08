@@ -52,7 +52,7 @@ Para dizer qual é a aplicação default para configurações como hotdeploy (hd
 
 ```json
 {
-  "defaultWebProjectName" : "flightgroup-api",
+  "defaultWebProjectName" : "service-name-defined-in-docker-compose",
 }
 ```
 
@@ -62,7 +62,7 @@ Para isso basta adicionar as apps dentro do atributo appsEnabled
 
 ```json
 {
-  "defaultWebProjectName" : "flightgroup-api",
+  "defaultWebProjectName" : "service-name-defined-in-docker-compose",
   "appsEnabled": [
     {"name": "redis"},
     {"name": "consul"}
@@ -78,7 +78,7 @@ Para criar seus comandos você deve adicionar a tag customCommandExec.
 ex:
 ```json
 {
-  "defaultWebProjectName" : "flightgroup-api",
+  "defaultWebProjectName" : "service-name-defined-in-docker-compose",
   "appsEnabled": [
     {"name": "redis"},
     {"name": "consul"}
@@ -97,5 +97,20 @@ ex:
       "command": ["docker ps -a"]
     }
   ]
+}
+```
+
+# Para projetos não JAVA
+
+Caso você não trabalhe com java e queira utilizar a nossa lib.
+
+Basta adicionar o atributo "javaProject" na configuração.
+
+ex:
+
+```json
+{
+  "defaultWebProjectName" : "service-name-defined-in-docker-compose",
+  "javaProject": false
 }
 ```
